@@ -3,15 +3,19 @@ const { } = Astro.props;
 ---
 
 <script is:inline>
-  if (
-    localStorage.theme === "dark" ||
-    (!("theme" in localStorage) &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches)
-  ) {
-    document.documentElement.classList.add("dark");
-  } else {
-    document.documentElement.classList.remove("dark");
-  }
+  + if (!localStorage.theme) {
+  +   localStorage.theme = "light";
+  + }
+  
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
 
   function attachEvent(selector, event, fn) {
     const matches = document.querySelectorAll(selector);
