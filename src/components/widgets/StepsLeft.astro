@@ -1,0 +1,69 @@
+---
+import { Icon } from "astro-icon";
+import Picture from "~/components/core/Picture.astro";
+
+const {} = Astro.props;
+---
+
+<section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-6xl">
+  <div class="grid gap-6 row-gap-10 md:grid-cols-2">
+    <div class="md:py-6 md:pr-16 text-gray-700 dark:text-gray-400">
+      <div class="flex">
+        <div class="mb-12 lg:mb-0 pb-12 lg:pb-0 border-b lg:border-b-0">
+          <h2 class="mb-4 text-3xl lg:text-4xl font-bold font-heading">
+            Individuelle Weihnachtspullover erstellen
+          </h2>
+          <p class="mb-8 text-xl text-gray-600 dark:text-slate-400">
+            Es gibt kein besseres Merchandise als tolle, individuell gestaltete
+            Weihnachtspullover. Die Pullover sind komplett gestrickt (das Muster
+            ist eingestrickt) und sie sehen toll aus und fühlen sich toll an.
+            Wenn Sie in dieser Urlaubssaison etwas Lustiges für Ihre Marke
+            kreieren möchten, sollten Sie sich das unbedingt ansehen.
+          </p>
+
+          <ul class="list-disc list-inside mb-8 text-xl text-gray-600 dark:text-slate-400">
+            <li class="pb-2">
+              Superschnell, 30-35 Tage Produktion (auch Expressbestellungen
+              möglich).
+            </li>
+
+            <li class="pb-2">
+              Ein kompetentes Team, das Ihnen bei der Erstellung Ihres Designs hilft.
+            </li>
+
+            <li class="pb-2">
+              Super weich, erstaunliche Qualität.
+            </li>
+            <li class="pb-2">
+              Nachhaltige, langlebige Stoffe.
+            </li>
+            <li class="pb-2">
+              Mindestbestellmenge von nur 100 Pullovern.
+            </li>
+            <li>
+              Internationaler Versand möglich.
+            </li>
+          </ul>
+
+          <div class="w-full">
+            <a
+              class="btn text-white bg-green-800 hover:bg-green-600 mb-4 sm:mb-0 font-bold"
+              href="#"
+              >Erstellen beginnen
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="relative">
+      <Picture
+        class="inset-0 object-cover object-top w-full rounded-md shadow-lg md:absolute md:h-full bg-gray-400 dark:bg-slate-700"
+        src={import("~/assets/images/iHop.jpg")}
+        widths={[400, 768]}
+        sizes="(max-width: 768px) 601px, 601px"
+        alt="Astronaut"
+        aspectRatio="601:601"
+      />
+    </div>
+  </div>
+</section>

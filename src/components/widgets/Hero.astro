@@ -1,0 +1,20 @@
+---
+import Picture from "~/components/core/Picture.astro";
+const { } = Astro.props;
+---
+
+<section>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="py-1 md:py-1">
+      <div>
+        <div class="relative flex justify-center mb-8">
+          <div class="flex flex-col justify-center">
+            <Picture src={import("~/assets/images/3banner70.jpg")}
+              class="mx-auto" widths={[400, 1000]}
+              sizes="(max-width: 767px) 400px, 1000px" alt="Hero Image" aspectRatio="2:1" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,13 @@
+---
+import Picture from "~/components/core/Picture.astro";
+const { } = Astro.props;
+---
+
+<div class="flex flex-col justify-center">
+  <Picture src={import("~/assets/images/Roody_logo_640.png")}
+    class="mx-auto" widths={[50, 220]}
+    sizes="(max-width: 767px) 50, 220px" alt="Hero Image" aspectRatio="6:1" />
+</div>
+<!--<span class="self-center ml-2 text-2xl font-extrabold text-gray-900 whitespace-nowrap dark:text-white">
+  ROODY
+</span>-->

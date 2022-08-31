@@ -1,0 +1,56 @@
+---
+import { Icon } from "astro-icon";
+import Picture from "~/components/core/Picture.astro";
+
+const {} = Astro.props;
+---
+
+<section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-6xl">
+  <div class="grid gap-6 row-gap-10 md:grid-cols-2">
+    <div class="relative">
+      <Picture
+        class="inset-0 object-cover object-top w-full rounded-md shadow-lg md:absolute md:h-full bg-gray-400 dark:bg-slate-700"
+        src={import("~/assets/images/pilots.jpg")}
+        widths={[400, 768]}
+        sizes="(max-width: 768px) 640px, 426px"
+        alt="#"
+        aspectRatio="640:426"
+      />
+    </div>
+    <div class="md:py-6 md:pl-16 text-gray-700 dark:text-gray-400">
+      <div class="flex">
+        <div class="mb-12 lg:mb-0 pb-12 lg:pb-0 border-b lg:border-b-0">
+          <p class="mb-8 font-bold text-xl text-gray-600 dark:text-slate-400">
+            Um zu beginnen, klicken Sie einfach auf die Schaltfläche "Erstellung
+            starten" unten.
+          </p>
+
+          <ul class="list-decimal list-inside mb-8 text-xl text-gray-600 dark:text-slate-400">
+            <li class="pb-2">
+              Senden Sie uns eine kurze Nachricht. Wir antworten in der Regel sehr schnell (innerhalb einer Stunde während der Geschäftszeiten).
+            </li>
+
+            <li class="pb-2">
+              Wir arbeiten dann mit Ihnen zusammen, um ein tolles Design zu entwerfen.
+            </li>
+
+            <li class="pb-2">
+              Wenn Sie mit dem Design zufrieden sind, fertigen wir den ersten Pullover an, bevor wir ihn in die Massenproduktion geben.            </li>
+
+            <li>
+              Wir liefern Ihre tollen Pullover direkt zu Ihnen nach Hause (überall auf der Welt). Wir versenden auch an mehrere Standorte, wenn Ihr Team.
+            </li>
+
+          </ul>
+          <div class="w-full">
+            <a
+              class="btn text-white bg-green-800 hover:bg-green-600 mb-4 sm:mb-0 font-bold"
+              href="#"
+              >Erstellen beginnen
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

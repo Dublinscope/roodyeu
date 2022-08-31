@@ -1,0 +1,50 @@
+---
+import { Icon } from "astro-icon";
+import Picture from "~/components/core/Picture.astro";
+
+const {} = Astro.props;
+---
+
+<section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-6xl">
+  <div class="grid gap-6 row-gap-10 md:grid-cols-2">
+    <div class="md:py-6 md:pr-16 text-gray-700 dark:text-gray-400">
+      <div class="flex">
+        <div class="mb-12 lg:mb-0 pb-12 lg:pb-0 border-b lg:border-b-0">
+          <h2 class="mb-4 text-3xl lg:text-4xl font-bold font-heading">
+            Welches Material verwenden Sie für Ihre hässlichen Weihnachtspullover?
+          </h2>
+
+          <p class="mb-8 text-xl text-gray-600 dark:text-slate-400">
+            Alle unsere hässlichen Weihnachtspullover sind aus superweichem Acrylgarn (nicht juckend). Wir haben im Laufe der Jahre viele Stoffe getestet und Acryl ist bei weitem die beste Option. Es sieht hervorragend aus, fühlt sich hervorragend an und lässt sich erstaunlich gut waschen - die Pullover werden sich fantastisch anfühlen.
+          </p>
+
+          <p class="mb-8 text-xl text-gray-600 dark:text-slate-400">
+            Um Ihre exakte Farbe zu erhalten, nehmen wir Ihren Pantone (Farbe) und gleichen ihn mit unserem Garn ab, damit Ihr Pullover die gleiche Farbe wie Ihr Branding hat. Jeder Pullover ist extrem weich und juckt nicht.
+          </p>
+
+          <p class="mb-8 text-xl text-gray-600 dark:text-slate-400">
+            Die Pullover lassen sich erstaunlich gut waschen und tragen - wir haben im Laufe der Jahre so viele Pullover genäht, dass wir wirklich gut darin geworden sind. Wir sind Experten für die Herstellung von Strickwaren und werden von den größten Unternehmen der Welt für die Produktion eingesetzt.
+          </p>
+
+          <div class="w-full">
+            <a
+              class="btn text-white bg-green-800 hover:bg-green-600 mb-4 sm:mb-0 font-bold"
+              href="#"
+              >Erstellen beginnen
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="relative">
+      <Picture
+        class="inset-0 object-cover object-top w-full rounded-md shadow-lg md:absolute md:h-full bg-gray-400 dark:bg-slate-700"
+        src={import("~/assets/images/closeup.jpg")}
+        widths={[1200]}
+        sizes="(max-width: 768px) 1200px, 900px"
+        alt="Astronaut"
+        aspectRatio="1200:900"
+      />
+    </div>
+  </div>
+</section>
