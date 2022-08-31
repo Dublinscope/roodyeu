@@ -1,9 +1,9 @@
 export const SITE = {
-  name: "AstroWind",
-  domain: "https://astrowind.vercel.app",
+  name: "Roody",
+  domain: "https://roody.eu",
 
-  title: "AstroWind — Your website with Astro + Tailwind CSS",
-  description: "🚀 AstroWind is a free and ready to start template to make your website using Astro and Tailwind CSS.",
+  title: "Roody Germany",
+  description: "Custom swag.",
 
   postsPerPage: 6,
   
