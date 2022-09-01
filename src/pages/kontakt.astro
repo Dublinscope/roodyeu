@@ -1,0 +1,22 @@
+---
+import Layout from "~/layouts/PageLayout.astro";
+
+import { SITE } from "~/config.mjs";
+
+
+import BasicCTA from "~/components/widgets/BasicCTA.astro";
+
+
+
+
+const title = SITE.title;
+const description = SITE.description;
+const canonical = new URL("", Astro.site);
+---
+
+<Layout meta={{ title, description, canonical }}>
+
+
+
+  <BasicCTA />
+</Layout>
