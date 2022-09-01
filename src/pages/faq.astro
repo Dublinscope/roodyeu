@@ -1,0 +1,19 @@
+---
+import Layout from "~/layouts/PageLayout.astro";
+
+import { SITE } from "~/config.mjs";
+
+
+import FAQs from "~/components/widgets/FAQs.astro";
+
+
+const title = SITE.title;
+const description = SITE.description;
+const canonical = new URL("", Astro.site);
+---
+
+<Layout meta={{ title, description, canonical }}>
+
+  <FAQs />
+
+</Layout>
