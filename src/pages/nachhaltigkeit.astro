@@ -1,0 +1,24 @@
+---
+import Layout from "~/layouts/PageLayout.astro";
+
+import { SITE } from "~/config.mjs";
+
+
+import BasicEthos from "~/components/widgets/BasicEthos.astro";
+import Ethos from "~/components/widgets/Ethos.astro";
+
+
+import StepsEthos from "~/components/widgets/StepsEthos.astro";
+
+
+const title = SITE.title;
+const description = SITE.description;
+const canonical = new URL("", Astro.site);
+---
+
+<Layout meta={{ title, description, canonical }}>
+  <StepsEthos />
+  <BasicEthos />
+  <Ethos />
+
+</Layout>
