@@ -2,8 +2,8 @@ export const SITE = {
   name: "Roody",
   domain: "https://roody.eu",
 
-  title: "Roody Germany",
-  description: "Custom swag.",
+  title: "Roody: Weihnachtspullis Gestalten",
+  description: "Gestrickte, völlig individuelle Pullover für Ihre Marke. Für Wiederverkauf oder Geschenke. Superweich, tolle Qualität. Nachhaltige, langlebige Stoffe. Mindestbestellung nur 100 Stk.",
 
   postsPerPage: 6,
   
