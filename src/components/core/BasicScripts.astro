@@ -1,21 +1,21 @@
 ---
-const { } = Astro.props;
+const {} = Astro.props;
 ---
 
 <script is:inline>
-  + if (!localStorage.theme) {
-  +   localStorage.theme = "light";
-  + }
-  
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
+  // Set "light" theme as default
+  // if (!localStorage.theme) {
+  //   localStorage.theme = "light";
+  // }
+
+  if (
+    localStorage.theme === "light" ||
+    (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)
+  ) {
+    document.documentElement.classList.add("dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+  }
 
   function attachEvent(selector, event, fn) {
     const matches = document.querySelectorAll(selector);
@@ -29,15 +29,13 @@ const { } = Astro.props;
   window.onload = function () {
     attachEvent("[data-aw-toggle-menu]", "click", function (elem) {
       elem.classList.toggle("expanded");
-      document.documentElement.classList.toggle("overflow-hidden");
+      document.body.classList.toggle("overflow-hidden");
       document.getElementById("menu")?.classList.toggle("hidden");
     });
 
     attachEvent("[data-aw-toggle-color-scheme]", "click", function (elem) {
       document.documentElement.classList.toggle("dark");
-      localStorage.theme = document.documentElement.classList.contains("dark")
-        ? "dark"
-        : "light";
+      localStorage.theme = document.documentElement.classList.contains("dark") ? "dark" : "light";
     });
   };
   window.onpageshow = function () {
@@ -45,7 +43,7 @@ const { } = Astro.props;
     if (elem) {
       elem.classList.remove("expanded");
     }
-    document.documentElement.classList.remove("overflow-hidden");
+    document.body.classList.remove("overflow-hidden");
     document.getElementById("menu")?.classList.add("hidden");
   };
 </script>
