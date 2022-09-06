@@ -7,6 +7,6 @@ export const SITE = {
 
   postsPerPage: 6,
   
-  googleAnalyticsId: false, // or "G-XXXXXXXXXX",
-  googleSiteVerificationId: "orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M",
+  googleAnalyticsId: "G-8CJK7GXB8H",
+  //googleSiteVerificationId: "orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M",
 };
