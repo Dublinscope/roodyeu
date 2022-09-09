@@ -1,0 +1,54 @@
+---
+import { Icon } from "astro-icon";
+import Picture from "~/components/core/Picture.astro";
+
+const {} = Astro.props;
+---
+
+<section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-6xl">
+  <div class="grid gap-6 row-gap-10 md:grid-cols-2">
+    <div class="relative">
+      <Picture
+        class="inset-0 object-cover object-top w-full rounded-md shadow-lg md:absolute md:h-full bg-gray-400 dark:bg-slate-700"
+        src={import("~/assets/images/xmas-sweater-model.jpg")}
+        widths={[400, 768]}
+        sizes="(max-width: 768px) 640px, 640px"
+        alt="#"
+        aspectRatio="640:640"
+      />
+    </div>
+    <div class="md:py-6 md:pl-16 text-gray-700 dark:text-gray-400">
+      <div class="flex">
+        <div class="mb-12 lg:mb-0 pb-12 lg:pb-0 border-b lg:border-b-0">
+          <h2 class="mb-4 text-3xl lg:text-4xl font-bold font-heading">
+            Hoe ontwerp ik mijn gepersonaliseerde kersttruien?
+          </h2>
+          <p class="mb-8 text-xl text-gray-600 dark:text-slate-400">
+            Roody heeft een ontwerpteam dat helemaal vanaf het begin gepersonaliseerde kersttruien maakt. Stuur ons een paar eenvoudige details en ons geweldige team zal iets geheel unieks voor je merk of organisatie maken.
+          </p>
+
+          <p class="mb-8 text-xl text-gray-600 dark:text-slate-400">
+            We verwerken jouw kleuren, branding en zorgen ervoor dat jouw merk wordt weerspiegeld in je truien. Als je de truien liever zelf ontwerpt, is dat geen natuurlijk probleem - we hebben sjablonen en stijlgidsen en helpen je graag verder.
+          </p>
+
+          <p class="mb-8 text-xl text-gray-600 dark:text-slate-400">
+            Een van de beste dingen van gepersonaliseerde lelijke truien is dat je het ontwerp overal kunt gebruiken - aan de voorkant, achterkant en mouwen. We breien iedere trui helemaal vanaf het begin met behulp van de meest geavanceerde breitechnologie en zorgen ervoor dat je truien er prachtig uit komen te zien.
+          </p>
+
+          <p class="mb-8 text-xl text-gray-600 dark:text-slate-400">
+            Klik op de onderstaande link om te beginnen en we helpen je graag verder.
+          </p>
+
+ 
+          <div class="w-full">
+            <a
+              class="btn text-white bg-green-800 hover:bg-green-600 mb-4 sm:mb-0 font-bold"
+              href="/kontakt"
+              >Begin met Creëren
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

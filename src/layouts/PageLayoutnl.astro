@@ -1,0 +1,16 @@
+---
+import Layout from "~/layouts/BaseLayout.astro";
+
+import Headernl from "~/components/widgets/Headernl.astro";
+import Footer from "~/components/widgets/Footer.astro";
+
+const { meta } = Astro.props;
+---
+
+<Layout meta={meta}>
+  <Headernl />
+  <main>
+    <slot />
+  </main>
+  <Footer />
+</Layout>

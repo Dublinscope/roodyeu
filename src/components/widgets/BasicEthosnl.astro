@@ -1,0 +1,53 @@
+---
+import { Icon } from "astro-icon";
+const { } = Astro.props;
+
+const items = [
+  {
+    title: "Swag waar mensen van houden",
+    description: "Eindigt niet op de vuilnisbelt",
+    icon: "tabler:check"
+  },
+  {
+    title: "Duurzame materialen",
+    description: "We maken gebruik van goede materialen waar we kunnen",
+    icon: "tabler:check"
+  },
+  {
+    title: "Een boom geplant",
+    description: "Eén boom geplant voor ieder item dat we maken",
+    icon: "tabler:check"
+  },
+]
+---
+
+<section class="relative">
+  <div class="absolute inset-0 bg-blue-50 pointer-events-none mb-0" aria-hidden="true">
+  </div>
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="py-0 pt-10 sm:py-6 lg:py-8 lg:pt-10">
+      <div class="mb-8 text-center">
+
+        <h2 class="text-3xl md:text-3xl font-bold leading-tighter tracking-tighter mb-4">
+          Merch en swag werken echt, maar alleen als het goed spul is.
+        </h2>
+
+      </div>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-start my-0 dark:text-white">
+        {items.map(({ title, description, icon }) => (
+          <div
+          class="relative flex flex-col p-6 bg-white dark:bg-slate-900 rounded shadow-xl hover:shadow-lg transition dark:border dark:border-slate-800">
+          <div class="flex items-center mb-4">
+            <Icon name={icon} class="w-6 h-6 text-gray-600 dark:text-slate-200 icon-bold rounded-full border-blue-600 border-2" />
+
+            <div class="ml-4 text-xl font-bold">{title}</div>
+          </div>
+          <p class="text-gray-500 dark:text-gray-400 text-md">
+            {description}
+          </p>
+        </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

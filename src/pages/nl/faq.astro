@@ -1,10 +1,10 @@
 ---
-import Layout from "~/layouts/PageLayout.astro";
+import Layout from "~/layouts/PageLayoutnl.astro";
 
 import { SITE } from "~/config.mjs";
 
 
-import HighlightedPosts from "~/components/widgets/HighlightedPosts.astro";
+import FAQsnl from "~/components/widgets/FAQsnl.astro";
 
 
 const title = SITE.title;
@@ -14,6 +14,6 @@ const canonical = new URL("", Astro.site);
 
 <Layout meta={{ title, description, canonical }}>
 
-  <HighlightedPosts />
+  <FAQsnl />
 
 </Layout>

@@ -1,0 +1,50 @@
+---
+import { Icon } from "astro-icon";
+import Picture from "~/components/core/Picture.astro";
+
+const {} = Astro.props;
+---
+
+<section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-6xl">
+  <div class="grid gap-6 row-gap-10 md:grid-cols-2">
+    <div class="md:py-6 md:pr-16 text-gray-700 dark:text-gray-400">
+      <div class="flex">
+        <div class="mb-12 lg:mb-0 pb-12 lg:pb-0 border-b lg:border-b-0">
+          <h2 class="mb-4 text-3xl lg:text-4xl font-bold font-heading">
+            Welk materiaal gebruik je voor de gepersonaliseerde lelijke kersttruien?
+          </h2>
+
+          <p class="mb-8 text-xl text-gray-600 dark:text-slate-400">
+            Al onze gepersonaliseerde lelijke kersttruien zijn van superzacht acrylgaren (jeukt niet). We hebben in de loop der jaren veel stoffen getest en acryl is verreweg de beste optie voor het maken van truien. Het ziet er prachtig uit, voelt fijn aan en zijn heel goed te wassen - de truien voelen geweldig aan.
+          </p>
+
+          <p class="mb-8 text-xl text-gray-600 dark:text-slate-400">
+            Om je exacte kleur te vinden, nemen we je pantone (kleur) en matchen deze met ons garen, zodat je trui dezelfde kleur krijgt als de branding van je bedrijf. Iedere trui is heerlijk zacht en jeukt niet.
+          </p>
+
+          <p class="mb-8 text-xl text-gray-600 dark:text-slate-400">
+            De truien zijn heel goed te wassen zijn eenvoudig te dragen - we hebben in de loop der jaren zoveel truien gemaakt, dat we er echt goed in zijn geworden. We zijn experts in de productie van breigoed en worden door de grootste bedrijven ter wereld gebruikt voor de productie van truien.
+          </p>
+
+          <div class="w-full">
+            <a
+              class="btn text-white bg-green-800 hover:bg-green-600 mb-4 sm:mb-0 font-bold"
+              href="/kontakt"
+              >Begin met Creëren
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="relative">
+      <Picture
+        class="inset-0 object-cover object-top w-full rounded-md shadow-lg md:absolute md:h-full bg-gray-400 dark:bg-slate-700"
+        src={import("~/assets/images/closeup.jpg")}
+        widths={[1200]}
+        sizes="(max-width: 768px) 1200px, 900px"
+        alt="Astronaut"
+        aspectRatio="1200:900"
+      />
+    </div>
+  </div>
+</section>

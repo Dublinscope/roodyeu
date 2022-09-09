@@ -1,0 +1,92 @@
+---
+import { Icon } from "astro-icon";
+const { } = Astro.props;
+
+const items = [
+  [
+    {
+      question: "Kan ik met iemand overleggen over mijn trui?",
+      answer: `Zeker. Iedere klant krijgt een accountmanager toegewezen die gedurende het hele proces altijd beschikbaar zal zijn. Tijdens kantooruren kun je binnen een uur antwoord verwachten op al je vragen.`,
+    },
+    {
+      question: "Zijn er verborgen kosten?",
+      answer: `Nee, die zijn er niet! We geven je de volledige prijs vooraf, inclusief zowel belastingen als verzendkosten, tot aan de deur.`,
+    },
+    {
+      question: "Hoe snel kan ik ze in huis hebben?",
+      answer: `Snel. De truien zijn helemaal vanaf het begin gebreid, dus er komt wat handwerk bij kijken, maar onze productietijd is doorgaans slechts 30 dagen. We kunnen op verzoek zelfs spoedbestellingen aanbieden, dus als je ons laat weten wanneer je ze nodig hebt, kunnen we bevestigen of dit mogelijk zou zijn. In de zeldzame gevallen dat we dat het niet mogelijk zou zijn, laten we het je weten.`,
+    },
+    {
+      question: "Kan ik mijn eigen labels krijgen?",
+      answer: `Geen probleem - we kunnen je logo maken op het label van iedere lelijke trui drukken.`,
+    },
+    {
+      question:
+        "Wat bedoelen jullie met duurzaam?",
+      answer: `Afval / Vuilnisbelt - Bijna alle merch belandt op de vuilstort zonder dat het daadwerkelijk gebruikt wordt. Deze gepersonaliseerde lelijke truien niet - iedereen houdt van deze unieke kunstwerken. Het creëren van een unieke trui waar iedereen gek op is en die keer op keer wordt gedragen, is ons doel. We houden ervan om social meda in de gaten te houden om te zien hoe je kunstwerken terechtkomen. We maken al meer dan 10 jaar truien en we weten hoe we ze duurzaam kunnen produceren.
+
+Materialen - We maken gebruik van 100% acrylgaren om de truien te produceren. De truien zijn zacht en duurzaam en dragen en zijn goed te wassen Afhankelijk van de beschikbaarheid proberen we altijd gebruik te maken van gerecycled acryl. We minimaliseren mogelijke verspilling door alleen de exacte hoeveelheid garen te maken die nodig is voor je truien - we maken geen gebruik van giftige of schadelijke behandelingen in het productieproces.
+
+Arbeidsomstandigheden - We werken al jaren samen met een groep productiepartners en die zijn echt geweldig. Het personeel heeft uitstekenede werkomstandigheden - onze productiepartners worden onafhankelijk gecontroleerd en we bezoeken de fabrieken ook regelmatig om onszelf te controleren. We zorgen ervoor dat we nooit werken met goedkope, gevaarlijke, uitbuitende productiepartners.
+
+Bomen Planten - Natuurlijk planten we ook een boom voor ieder item dat we maken.`,
+    },
+  ],
+  [
+    {
+      question: "Zijn er beperkingen wat betreft het ontwerp?",
+      answer: `Het ontwerp kent vrijwel geen beperkingen, dus je kunt de voorkant, achterkant en mouwen ontwerpen. Je kunt iedere gewenste kleur gebruiken met een maximum van 6 kleuren per ontwerp. De manchetten, kragen en zoom moeten een effen kleur hebben, maar verder heb je totale vrijheid om alleen de geweldigste ontwerpen te creëren!`,
+    },
+    {
+      question: "Verzenden jullie internationaal?",
+      answer: `Ja, wij verzenden wereldwijd. De verzendkosten worden berekend op basis van product en hoeveelheid en worden in rekening gebracht als onderdeel van de eerste betaling. Bij het betalen van de hoofdbestelling laten we je weten wat de verzendkosten bedragen, in één keer.
+
+Je kunt je verzendkosten verlagen en besparen door op tijd te ontwerpen. Voor bestellingen die in augustus zijn geplaatst, heb je bijvoorbeeld een langzamere verzendoptie, wat betekent dat je artikelen begin november geleverd zullen worden. Je kunt enorm besparen op kosten met  langzamere verzending en je hebt zo ook veel tijd om je truien te merchandisen en te verkopen. Bovendien is dit ook veel beter voor het milieu.
+
+Als je later opnieuw wil bestellen, zoals vaak gebeurt, kunnen we de truien enorm snel produceren en verzenden.`,
+    },
+    {
+      question:
+        "Hebben jullie een lelijke truienfabriek?",
+      answer: `Ja, dat hebben we. We maken al onze truien in een duurzame fabriek waar mensen eerlijk behandeld worden en we maken gebruik van ethische productiemethoden.
+
+We gebruiken de nieuwste technologieën om al je truien te breien - geavanceerde breimachines kunnen geweldige ontwerpen breien die er prachtig uitzien en fijn aanvoelen.
+
+We maken al bijna tien jaar gepersonaliseerde lelijke truien - we hebben enorm veel ervaring en de meeste van onze klanten blijven keer op keer terugkomen. Het breiwerk dat we maken is van de meest geweldige kwaliteit.
+
+Klik op de onderstaande link om te beginnen en dan helpen we je graag verder.`,
+    },
+  ],
+];
+---
+
+<div class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
+  <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
+    <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+      <h2 class="max-w-lg mb-4 font-sans text-3xl font-bold leading-none tracking-tight sm:text-4xl md:mx-auto">
+        Veelgestelde Vragen
+      </h2>
+    </div>
+  </div>
+  <div class="max-w-screen-xl sm:mx-auto">
+    <div class="grid grid-cols-1 gap-x-8 gap-y-8 lg:gap-x-16 md:grid-cols-2">
+      {
+      items.map((subitems) => (
+      <div class="space-y-8">
+        {subitems.map(({ question, answer }) => (
+        <div>
+          <p class="mb-4 text-xl font-bold">
+            <Icon name="tabler:arrow-down-right" class="w-7 h-7 text-blue-500 inline-block icon-bold" />
+            {question}
+          </p>
+          {answer.split("\n\n").map((paragraph) => (
+          <p class="text-gray-700 dark:text-gray-400 mb-2" set:html={paragraph} />
+          ))}
+        </div>
+        ))}
+      </div>
+      ))
+      }
+    </div>
+  </div>
+</div>

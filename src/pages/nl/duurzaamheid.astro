@@ -1,0 +1,24 @@
+---
+import Layout from "~/layouts/PageLayoutnl.astro";
+
+import { SITE } from "~/config.mjs";
+
+
+import BasicEthosnl from "~/components/widgets/BasicEthosnl.astro";
+import Ethosnl from "~/components/widgets/Ethosnl.astro";
+
+
+import StepsEthosnl from "~/components/widgets/StepsEthosnl.astro";
+
+
+const title = SITE.title;
+const description = SITE.description;
+const canonical = new URL("", Astro.site);
+---
+
+<Layout meta={{ title, description, canonical }}>
+  <StepsEthosnl />
+  <BasicEthosnl />
+  <Ethosnl />
+
+</Layout>
