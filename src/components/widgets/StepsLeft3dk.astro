@@ -1,0 +1,50 @@
+---
+import { Icon } from "astro-icon";
+import Picture from "~/components/core/Picture.astro";
+
+const {} = Astro.props;
+---
+
+<section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-6xl">
+  <div class="grid gap-6 row-gap-10 md:grid-cols-2">
+    <div class="md:py-6 md:pr-16 text-gray-700 dark:text-gray-400">
+      <div class="flex">
+        <div class="mb-12 lg:mb-0 pb-12 lg:pb-0 border-b lg:border-b-0">
+          <h2 class="mb-4 text-3xl lg:text-4xl font-bold font-heading">
+            Hvilket materiale bruger i til de personliggjorte grimme julesweaters?
+          </h2>
+
+          <p class="mb-8 text-xl text-gray-600 dark:text-slate-400">
+            Alle vores personliggjorte grimme julesweatre er fremstillet af superblødt akrylgarn (klør ikke). Vi har testet mange stoffer gennem årene, og akryl er uden tvivl den bedste løsning. Det ser smukt ud og føles strålende at have på, og så vaskes trøjerne utroligt godt - trøjerne vil føles uden tvivl føles fantastiske.
+          </p>
+
+          <p class="mb-8 text-xl text-gray-600 dark:text-slate-400">
+            For at komme frem til den nøjagtige farve tager vi gerne jeres pantone (farve) og matcher den til vores garn, så jeres sweater får samme farve som virksomhedens branding. Hver sweater er ekstremt blød og klør ikke.
+          </p>
+
+          <p class="mb-8 text-xl text-gray-600 dark:text-slate-400">
+            Trøjerne vaskes utroligt godt og kan holde til meget slid - vi har lavet så mange trøjer gennem årene, at vi er blevet rigtig gode til det. Vi er eksperter i strikproduktion og bruges af de største virksomheder i verden til produktion af trøjer.
+          </p>
+
+          <div class="w-full">
+            <a
+              class="btn text-white bg-green-800 hover:bg-green-600 mb-4 sm:mb-0 font-bold"
+              href="/kontakt"
+              >Begynd at skabe
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="relative">
+      <Picture
+        class="inset-0 object-cover object-top w-full rounded-md shadow-lg md:absolute md:h-full bg-gray-400 dark:bg-slate-700"
+        src={import("~/assets/images/closeup.jpg")}
+        widths={[1200]}
+        sizes="(max-width: 768px) 1200px, 900px"
+        alt="Astronaut"
+        aspectRatio="1200:900"
+      />
+    </div>
+  </div>
+</section>

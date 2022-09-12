@@ -1,0 +1,24 @@
+---
+import Layout from "~/layouts/PageLayoutdk.astro";
+
+import { SITE } from "~/config.mjs";
+
+
+import BasicEthosdk from "~/components/widgets/BasicEthosdk.astro";
+import Ethosdk from "~/components/widgets/Ethosdk.astro";
+
+
+import StepsEthosdk from "~/components/widgets/StepsEthosdk.astro";
+
+
+const title = SITE.title;
+const description = SITE.description;
+const canonical = new URL("", Astro.site);
+---
+
+<Layout meta={{ title, description, canonical }}>
+  <StepsEthosdk />
+  <BasicEthosdk />
+  <Ethosdk />
+
+</Layout>

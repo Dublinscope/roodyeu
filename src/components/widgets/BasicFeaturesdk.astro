@@ -1,0 +1,58 @@
+---
+import { Icon } from "astro-icon";
+const { } = Astro.props;
+
+const items = [
+  {
+    title: "Hurtig omsætning",
+    description: "Super hurtig, 30-35 dages produktion (ekspresordrer er også tilgængelige).",
+    icon: "tabler:check"
+  },
+  {
+    title: "Materialer af høj kvalitet",
+    description: "Bæredygtige og langtidsholdbare produkter der ikke ender på lossepladsen.",
+    icon: "tabler:check"
+  },
+  {
+    title: "Lav minimumsordre",
+    description: "Vi har en lav minimumsordre, på blot 50 enheder.",
+    icon: "tabler:check"
+  },
+]
+---
+
+<section class="relative">
+  <div class="absolute inset-0 bg-blue-50 pointer-events-none mb-0" aria-hidden="true">
+  </div>
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="py-0 pt-0 sm:py-6 lg:py-8 lg:pt-0">
+      <!--<div class="mb-8 text-center">
+        <p class="text-base text-blue-600 dark:text-blue-200 font-semibold tracking-wide uppercase">
+          Components
+        </p>
+        <h2 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4">
+          Most used widgets
+        </h2>
+        <p class="max-w-3xl mx-auto text-center text-xl text-gray-600 dark:text-slate-400">
+          Provides frequently used components for building websites using
+          Tailwind CSS
+        </p>
+      </div>-->
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-start my-0 dark:text-white">
+        {items.map(({ title, description, icon }) => (
+          <div
+          class="relative flex flex-col p-6 bg-white dark:bg-slate-900 rounded shadow-xl hover:shadow-lg transition dark:border dark:border-slate-800">
+          <div class="flex items-center mb-4">
+            <Icon name={icon} class="w-6 h-6 text-gray-600 dark:text-slate-200 icon-bold rounded-full border-blue-600 border-2" />
+
+            <div class="ml-4 text-xl font-bold">{title}</div>
+          </div>
+          <p class="text-gray-500 dark:text-gray-400 text-md">
+            {description}
+          </p>
+        </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

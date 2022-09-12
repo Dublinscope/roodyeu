@@ -1,0 +1,39 @@
+---
+import Layout from "~/layouts/PageLayoutdk.astro";
+
+import { SITE } from "~/config.mjs";
+
+import Hero from "~/components/widgets/Hero.astro";
+import Herologodk from "~/components/widgets/Herologodk.astro";
+import BasicFeaturesdk from "~/components/widgets/BasicFeaturesdk.astro";
+
+import StepsLeftdk from "~/components/widgets/StepsLeftdk.astro";
+import StepsLeft2dk from "~/components/widgets/StepsLeft2dk.astro";
+import StepsLeft3dk from "~/components/widgets/StepsLeft3dk.astro";
+import StepsRightdk from "~/components/widgets/StepsRightdk.astro";
+import StepsRight2dk from "~/components/widgets/StepsRight2dk.astro";
+import StepsRight3dk from "~/components/widgets/StepsRight3dk.astro";
+
+
+const title = SITE.title;
+const description = SITE.description;
+const canonical = new URL("", Astro.site);
+---
+
+<Layout meta={{ title, description, canonical }}>
+  <Hero />
+  <Herologodk />
+  <BasicFeaturesdk />
+  <StepsLeftdk />
+  <StepsRightdk />
+  <StepsRight2dk />
+  <StepsLeft2dk />
+  <StepsRight3dk />
+  <StepsLeft3dk />
+  <!--<TwoColsFeatures />
+  <StepsFeatures />
+  <HighlightedPosts />
+  <FAQs />
+  <Stats />
+  <BasicCTA />-->
+</Layout>

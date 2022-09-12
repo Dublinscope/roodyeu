@@ -1,0 +1,92 @@
+---
+import { Icon } from "astro-icon";
+const { } = Astro.props;
+
+const items = [
+  [
+    {
+      question: "Kan jeg tale med nogen om min sweater?",
+      answer: `Absolut. Hver kunde får tildelt en account manager, og de vil stå fuldt til rådighed under hele processen. I åbningstiden kan du normalt forvente at få svar på alle forespørgsler inden for en time.`,
+    },
+    {
+      question: "Er der nogen skjulte omkostninger?",
+      answer: `Nej! Vi giver dig den fulde pris på forhånd, inklusive både moms og skat, samt forsendelse direkte til din adresse.`,
+    },
+    {
+      question: "Hvor hurtigt kan jeg få dem?",
+      answer: `Vi leverer hurtigt. Trøjerne bliver strikket fra bunden, så der er en del håndarbejde involveret, men vores typiske produktionstid er på blot 30 dage. Vi kan endda tilbyde hasteordrer efter anmodning, så hvis du fortæller os hvornår du skal bruge dine trøjer, kan vi bekræfte om vi kan overholde din dato. I de sjældne tilfælde hvor vi ikke kan fortæller vi dig selvfølgelig nærmere.`,
+    },
+    {
+      question: "Kan jeg få mine egne etiketter?",
+      answer: `Intet problem - vi kan fremstille og inkludere dit logo på etiketten på hver enkelt grim sweater.`,
+    },
+    {
+      question:
+        "Hvad mener i med bæredygtigt?",
+      answer: `Affald / Deponering - Næsten alt merchandise ender på lossepladsen uden at blive brugt. Ikke disse personliggjorte grimme juletrøjer - disse unikke kunstværker er elsket af alle. Vores mål er at skabe en unik sweater der er elsket og genbruges år efter år. Vi elsker at holde øje med de sociale medier for at se, hvordan kunstværker ender hos forbrugerne. Vi har lavet sweatere i over 10 år, og vi ved hvordan man får dem til at holde i mange år.
+
+Materialer - Vi bruger 100% akrylgarn til at lave trøjerne. Trøjerne er bløde og slidstærke, og så klarer de sig rigtig godt i vask. Vi forsøger altid at bruge genbrugsakryl afhængigt af tilgængeligheden. Vi minimerer samtidig ethvert potentielt spild, og producerer kun den nøjagtige mængde garn der kræves til dine sweatere. Vi bruger heller ikke nogen giftige eller skadelige behandlinger i produktionsprocessen.
+
+Arbejdsforhold - Vi har arbejdet sammen med en udvalgt gruppe af produktionspartnere i årevis nu, og de er virkelig fantastiske. Arbejdsforholdene for personalet er absolut fremragende - vores produktionspartnere bliver revideret uafhængigt, og vi besøger også fabrikkerne med jævne mellemrum for at kontrollere det selv. Vi sørger for aldrig at arbejde med billige, farlige og udnyttende produktionspartnere.
+
+Plantning af træer - Vi planter naturligvis også et træ for hver vare vi fremstiller.`,
+    },
+  ],
+  [
+    {
+      question: "Er der nogen restriktioner på designet?",
+      answer: `Designet kan gå i næsten hvilkem som helst retning. Det betyder at du kan bruge forsiden, bagsiden og ærmerne til designet. Du kan bruge alle de farver du ønsker, med et maksimum på 6 farver pr. design. Manchetterne, kraverne og sømmen skal være ensfarvet, men ellers har du fuld frihed til at skabe de mest fantastiske og personlige designs!`,
+    },
+    {
+      question: "Sender I internationalt?",
+      answer: `Ja, vi sender til hele verden. Leveringsomkostningerne beregnes på baggrund af produkter og mængde, og prisen opkræves som en del af den oprindelige betaling. Vi viser dig leveringsomkostningerne sammen med hovedordren ved betalingen, så du kan klare alt på samme tid.
+
+Du kan reducere dine leveringsomkostninger og opnå besparelser ved at designe tidligt i sæsonen. For ordrer afgivet i august har du f.eks. en langsommere leveringsmulighed, hvilket betyder at dine varer ankommer i begyndelsen af november. Der er en stor besparelse at hente ved langsommere forsendelse, og du har stadigvæk masser af tid til at markedsføre og sælge dine trøjer. Desuden er det meget meget bedre for miljøet.
+
+Hvis du gerne vil bestille senere kan vi som altid lave og sende trøjerne utrolig hurtigt.`,
+    },
+    {
+      question:
+        "Har i en fabrik der fremstiller de grimme sweatere?",
+      answer: `Ja, det har vi.  Vi fremstiller alle vores sweatere på en bæredygtig fabrik hvor folk bliver behandlet fair, og hvor vi bruger etiske produktionsmetoder.
+
+Vi bruger de nyeste teknologier til at strikke alle jeres sweatere - avancerede strikkemaskiner der er i stand til at strikke fantastiske designs, der både ser fantastiske ud og føles geniale at have på.
+
+Vi har lavet personlige grimme sweaters i næsten ti år - vi har derfor en rig erfaring, og de fleste af vores kunder kommer tilbage igen og igen. De strikvarer vi laver er af den mest fantastiske kvalitet.
+
+Hvis du vil i gang skal du blot klikke på linket nedenfor, så hjælper vi dig godt på vej.`,
+    },
+  ],
+];
+---
+
+<div class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
+  <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
+    <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+      <h2 class="max-w-lg mb-4 font-sans text-3xl font-bold leading-none tracking-tight sm:text-4xl md:mx-auto">
+        Ofte stillede spørgsmål
+      </h2>
+    </div>
+  </div>
+  <div class="max-w-screen-xl sm:mx-auto">
+    <div class="grid grid-cols-1 gap-x-8 gap-y-8 lg:gap-x-16 md:grid-cols-2">
+      {
+      items.map((subitems) => (
+      <div class="space-y-8">
+        {subitems.map(({ question, answer }) => (
+        <div>
+          <p class="mb-4 text-xl font-bold">
+            <Icon name="tabler:arrow-down-right" class="w-7 h-7 text-blue-500 inline-block icon-bold" />
+            {question}
+          </p>
+          {answer.split("\n\n").map((paragraph) => (
+          <p class="text-gray-700 dark:text-gray-400 mb-2" set:html={paragraph} />
+          ))}
+        </div>
+        ))}
+      </div>
+      ))
+      }
+    </div>
+  </div>
+</div>
