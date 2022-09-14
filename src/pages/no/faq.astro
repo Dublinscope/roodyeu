@@ -4,9 +4,7 @@ import Layout from "~/layouts/PageLayoutno.astro";
 import { SITE } from "~/config.mjs";
 
 
-import BasicCTAdankeno from "~/components/widgets/BasicCTAdankeno.astro";
-
-
+import FAQsno from "~/components/widgets/FAQsno.astro";
 
 
 const title = SITE.title;
@@ -16,7 +14,6 @@ const canonical = new URL("", Astro.site);
 
 <Layout meta={{ title, description, canonical }}>
 
+  <FAQsno />
 
-
-  <BasicCTAdankeno />
 </Layout>

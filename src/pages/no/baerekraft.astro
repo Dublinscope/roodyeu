@@ -4,9 +4,11 @@ import Layout from "~/layouts/PageLayoutno.astro";
 import { SITE } from "~/config.mjs";
 
 
-import BasicCTAdankeno from "~/components/widgets/BasicCTAdankeno.astro";
+import BasicEthosno from "~/components/widgets/BasicEthosno.astro";
+import Ethosno from "~/components/widgets/Ethosno.astro";
 
 
+import StepsEthosno from "~/components/widgets/StepsEthosno.astro";
 
 
 const title = SITE.title;
@@ -15,8 +17,8 @@ const canonical = new URL("", Astro.site);
 ---
 
 <Layout meta={{ title, description, canonical }}>
+  <StepsEthosno />
+  <BasicEthosno />
+  <Ethosno />
 
-
-
-  <BasicCTAdankeno />
 </Layout>

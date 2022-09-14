@@ -1,0 +1,50 @@
+---
+import { Icon } from "astro-icon";
+import Picture from "~/components/core/Picture.astro";
+
+const {} = Astro.props;
+---
+
+<section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-6xl">
+  <div class="grid gap-6 row-gap-10 md:grid-cols-2">
+    <div class="md:py-6 md:pr-16 text-gray-700 dark:text-gray-400">
+      <div class="flex">
+        <div class="mb-12 lg:mb-0 pb-12 lg:pb-0 border-b lg:border-b-0">
+          <h2 class="mb-4 text-3xl lg:text-4xl font-bold font-heading">
+            Hvilket materiale bruker du til de skreddersydde stygge julegenserne?
+          </h2>
+
+          <p class="mb-8 text-xl text-gray-600 dark:text-slate-400">
+            Alle våre skreddersydde stygge julegensere er supermykt akrylgarn (ikke klør). Vi har testet mange stoffer gjennom årene, og akryl er det desidert beste alternativet. Den ser og føles strålende ut og vasker utrolig godt - genserne vil føles fantastiske.
+          </p>
+
+          <p class="mb-8 text-xl text-gray-600 dark:text-slate-400">
+            For å få din eksakte farge, tar vi pantone (farge) og matcher den til garnet vårt slik at genseren din får samme farge som merkevaren din. Hver genser er ekstremt myk og klør ikke.
+          </p>
+
+          <p class="mb-8 text-xl text-gray-600 dark:text-slate-400">
+            Genserne vaskes og bæres utrolig godt - vi har laget så mange gensere opp gjennom årene, vi har blitt veldig flinke til det. Vi er eksperter på produksjon av strikkevarer og brukes av de største selskapene i verden til produksjon.
+          </p>
+
+          <div class="w-full">
+            <a
+              class="btn text-white bg-green-800 hover:bg-green-600 mb-4 sm:mb-0 font-bold"
+              href="/kontakt"
+              >Begynn å lage
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="relative">
+      <Picture
+        class="inset-0 object-cover object-top w-full rounded-md shadow-lg md:absolute md:h-full bg-gray-400 dark:bg-slate-700"
+        src={import("~/assets/images/closeup.jpg")}
+        widths={[1200]}
+        sizes="(max-width: 768px) 1200px, 900px"
+        alt="Astronaut"
+        aspectRatio="1200:900"
+      />
+    </div>
+  </div>
+</section>
