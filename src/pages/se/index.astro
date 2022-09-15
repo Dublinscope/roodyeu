@@ -1,0 +1,39 @@
+---
+import Layout from "~/layouts/PageLayoutse.astro";
+
+import { SITE } from "~/config.mjs";
+
+import Hero from "~/components/widgets/Hero.astro";
+import Herologose from "~/components/widgets/Herologose.astro";
+import BasicFeaturesse from "~/components/widgets/BasicFeaturesse.astro";
+
+import StepsLeftse from "~/components/widgets/StepsLeftse.astro";
+import StepsLeft2se from "~/components/widgets/StepsLeft2se.astro";
+import StepsLeft3se from "~/components/widgets/StepsLeft3se.astro";
+import StepsRightse from "~/components/widgets/StepsRightse.astro";
+import StepsRight2se from "~/components/widgets/StepsRight2se.astro";
+import StepsRight3se from "~/components/widgets/StepsRight3se.astro";
+
+
+const title = SITE.title;
+const description = SITE.description;
+const canonical = new URL("", Astro.site);
+---
+
+<Layout meta={{ title, description, canonical }}>
+  <Hero />
+  <Herologose />
+  <BasicFeaturesse />
+  <StepsLeftse />
+  <StepsRightse />
+  <StepsRight2se />
+  <StepsLeft2se />
+  <StepsRight3se />
+  <StepsLeft3se />
+  <!--<TwoColsFeatures />
+  <StepsFeatures />
+  <HighlightedPosts />
+  <FAQs />
+  <Stats />
+  <BasicCTA />-->
+</Layout>

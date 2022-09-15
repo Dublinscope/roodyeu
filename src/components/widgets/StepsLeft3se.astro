@@ -1,0 +1,50 @@
+---
+import { Icon } from "astro-icon";
+import Picture from "~/components/core/Picture.astro";
+
+const {} = Astro.props;
+---
+
+<section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-6xl">
+  <div class="grid gap-6 row-gap-10 md:grid-cols-2">
+    <div class="md:py-6 md:pr-16 text-gray-700 dark:text-gray-400">
+      <div class="flex">
+        <div class="mb-12 lg:mb-0 pb-12 lg:pb-0 border-b lg:border-b-0">
+          <h2 class="mb-4 text-3xl lg:text-4xl font-bold font-heading">
+            Vilket material använder vi till de fula jultröjorna?
+          </h2>
+
+          <p class="mb-8 text-xl text-gray-600 dark:text-slate-400">
+            Alla våra anpassade fula jultröjor är supermjukt akrylgarn (som inte kliar). Vi har testat massor av tyger genom åren och akryl är det absolut bästa alternativet. Det ser ut och känns perfekt och går utmärkt att tvätta - tröjorna kommer att kännas fantastiska.
+          </p>
+
+          <p class="mb-8 text-xl text-gray-600 dark:text-slate-400">
+            För att få er exakta färg tar vi er pantone (färg) och matchar den med vårt garn så att er tröja får samma färg som ert varumärke. Varje tröja är extremt mjuk och kliar inte. 
+          </p>
+
+          <p class="mb-8 text-xl text-gray-600 dark:text-slate-400">
+            Tröjorna kan tvättas och slits inte - vi har gjort så många tröjor genom åren att vi har blivit riktigt bra på det. Vi är experter på stickad produktion och används av de största företagen i världen.
+          </p>
+
+          <div class="w-full">
+            <a
+              class="btn text-white bg-green-800 hover:bg-green-600 mb-4 sm:mb-0 font-bold"
+              href="/kontakt"
+              >Börja skapa
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="relative">
+      <Picture
+        class="inset-0 object-cover object-top w-full rounded-md shadow-lg md:absolute md:h-full bg-gray-400 dark:bg-slate-700"
+        src={import("~/assets/images/closeup.jpg")}
+        widths={[1200]}
+        sizes="(max-width: 768px) 1200px, 900px"
+        alt="Astronaut"
+        aspectRatio="1200:900"
+      />
+    </div>
+  </div>
+</section>

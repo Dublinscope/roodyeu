@@ -1,0 +1,64 @@
+---
+import { Icon } from "astro-icon";
+import Picture from "~/components/core/Picture.astro";
+
+const {} = Astro.props;
+---
+
+<section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-6xl">
+  <div class="grid gap-6 row-gap-10 md:grid-cols-2">
+    <div class="md:py-6 md:pr-16 text-gray-700 dark:text-gray-400">
+      <div class="flex">
+        <div class="mb-12 lg:mb-0 pb-12 lg:pb-0 border-b lg:border-b-0">
+          <h2 class="mb-4 text-3xl lg:text-4xl font-bold font-heading">
+            Skapa anpassade jultröjor
+          </h2>
+          <p class="mb-8 text-xl text-gray-600 dark:text-slate-400">
+            Det finns ingen bättre merch än fantastiska anpassade jultröjor. Tröjorna är helt stickade (mönstret stickas in) och de ser ut och känns fantastiska. Om du vill skapa något roligt för ditt företag den här julen - måste du kolla in dessa.
+          </p>
+
+          <ul class="list-disc list-inside mb-8 text-xl text-gray-600 dark:text-slate-400">
+            <li class="pb-2">
+              Supersnabb, 30-35 dagars produktion (expressbeställningar finns också).
+            </li>
+
+            <li class="pb-2">
+              Ett skickligt team som hjälper dig att skapa din design.
+            </li>
+
+            <li class="pb-2">
+              Supermjuk, fantastisk kvalitet.
+            </li>
+            <li class="pb-2">
+              Hållbara, tåliga tyger med lång livslängd.
+            </li>
+            <li class="pb-2">
+              Minsta beställning på bara 100 tröjor.
+            </li>
+            <li>
+              Internationell frakt tillgänglig.
+            </li>
+          </ul>
+
+          <div class="w-full">
+            <a
+              class="btn text-white bg-green-800 hover:bg-green-600 mb-4 sm:mb-0 font-bold"
+              href="/kontakt"
+              >Börja skapa
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="relative">
+      <Picture
+        class="inset-0 object-cover object-top w-full rounded-md shadow-lg md:absolute md:h-full bg-gray-400 dark:bg-slate-700"
+        src={import("~/assets/images/iHop.jpg")}
+        widths={[400, 768]}
+        sizes="(max-width: 768px) 601px, 601px"
+        alt="Astronaut"
+        aspectRatio="601:601"
+      />
+    </div>
+  </div>
+</section>

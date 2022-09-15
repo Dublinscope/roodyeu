@@ -1,0 +1,55 @@
+---
+import { Icon } from "astro-icon";
+import Picture from "~/components/core/Picture.astro";
+
+const {} = Astro.props;
+---
+
+<section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-6xl">
+  <div class="grid gap-6 row-gap-10 md:grid-cols-2">
+    <div class="relative">
+      <Picture
+        class="inset-0 object-cover object-top w-full rounded-md shadow-lg md:absolute md:h-full bg-gray-400 dark:bg-slate-700"
+        src={import("~/assets/images/pilots.jpg")}
+        widths={[400, 768]}
+        sizes="(max-width: 768px) 640px, 426px"
+        alt="#"
+        aspectRatio="640:426"
+      />
+    </div>
+    <div class="md:py-6 md:pl-16 text-gray-700 dark:text-gray-400">
+      <div class="flex">
+        <div class="mb-12 lg:mb-0 pb-12 lg:pb-0 border-b lg:border-b-0">
+          <p class="mb-8 font-bold text-xl text-gray-600 dark:text-slate-400">
+            För att börja, klicka bara på knappen "Börja skapa" nedan.
+          </p>
+
+          <ul class="list-decimal list-inside mb-8 text-xl text-gray-600 dark:text-slate-400">
+            <li class="pb-2">
+              Skicka oss ett kort meddelande. Vi svarar vanligtvis supersnabbt (inom en timme under kontorstid)
+            </li>
+
+            <li class="pb-2">
+              Vi arbetar sedan med dig för att skapa en fantastisk design.
+            </li>
+
+            <li class="pb-2">
+              När du är nöjd med designen gör vi den första tröjan för ditt godkännande innan vi går över till bulkproduktion.</li>
+
+            <li>
+              Vi skickar dina fantastiska tröjor, direkt till din dörr (var som helst i världen). Vi kan också leverera flera platser om ditt team är uppdelat på flera platser.
+            </li>
+
+          </ul>
+          <div class="w-full">
+            <a
+              class="btn text-white bg-green-800 hover:bg-green-600 mb-4 sm:mb-0 font-bold"
+              href="/kontakt"
+              >Börja skapa
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

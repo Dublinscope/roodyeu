@@ -4,9 +4,11 @@ import Layout from "~/layouts/PageLayoutse.astro";
 import { SITE } from "~/config.mjs";
 
 
-import BasicCTAdankese from "~/components/widgets/BasicCTAdankese.astro";
+import BasicEthosse from "~/components/widgets/BasicEthosse.astro";
+import Ethosse from "~/components/widgets/Ethosse.astro";
 
 
+import StepsEthosse from "~/components/widgets/StepsEthosse.astro";
 
 
 const title = SITE.title;
@@ -15,8 +17,8 @@ const canonical = new URL("", Astro.site);
 ---
 
 <Layout meta={{ title, description, canonical }}>
+  <StepsEthosse />
+  <BasicEthosse />
+  <Ethosse />
 
-
-
-  <BasicCTAdankese />
 </Layout>

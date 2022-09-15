@@ -1,0 +1,92 @@
+---
+import { Icon } from "astro-icon";
+const { } = Astro.props;
+
+const items = [
+  [
+    {
+      question: "Kan jag prata med någon om min tröja?",
+      answer: `Absolut. Varje kund tilldelas en ansvarig och de kommer att vara fullt tillgängliga under hela processen. Under kontorstid kan du vanligtvis förvänta dig ett svar på alla frågor inom en timme.`,
+    },
+    {
+      question: "Finns det några dolda kostnader?",
+      answer: `Ingen! Vi ger dig hela priset i förväg, inklusive skatt och frakt direkt till din dörr.`,
+    },
+    {
+      question: "Hur snabbt kan jag få dem?",
+      answer: `Snabbt. Tröjorna stickas från grunden så det är en del hantverk inblandat, men vår produktionstid är vanligtvis bara 30 dagar. Vi kan till och med erbjuda snabba beställningar på begäran, så om du meddelar oss när du behöver dem kan vi bekräfta om vi kan leverera till det datumet. I de sällsynta fall som vi inte kan, informerar vi dig.`,
+    },
+    {
+      question: "Kan jag få mina egna etiketter?",
+      answer: `Inga problem - vi kan inkludera din logotyp på etiketten på varje ful tröja.`,
+    },
+    {
+      question:
+        "Vad menar ni med hållbart?",
+      answer: `Avfall/Soptipp - Nästan all merch hamnar på soptippen utan att användas. Men inte dessa anpassade fula tröjor - dessa unika konstverk är älskade av alla. Att skapa en unik tröja som älskas och bärs om och om igen är vårt mål. Vi älskar att titta på sociala medier för att se hur era konstverk används. Vi har tillverkat tröjor i över 10 år och vi vet hur vi ska få dem att hålla. 
+
+Material - Vi använder 100% akrylgarn för att göra tröjorna. Tröjorna är mjuka och slitstarka och kan enkelt tvättas. Vi försöker alltid använda återvunnen akryl beroende på tillgänglighet. Vi minimerar eventuellt avfall genom att bara göra den exakta mängden garn som krävs för era tröjor - vi använder inga giftiga eller skadliga behandlingar i produktionsprocessen. 
+
+Arbetsförhållanden - Vi har arbetat med en utvald grupp produktionspartners i flera år nu, och de är verkligen fantastiska. Arbetsförhållandena för personalen är enastående - våra produktionspartners granskas av oberoende part och vi besöker också fabrikerna regelbundet för att kontrollera själva. Vi är noga med att aldrig använda billiga, farliga, exploaterande produktionspartners. 
+
+Trädplantering - Naturligtvis planterar vi också ett träd för varje produkt vi tillverkar.`,
+    },
+  ],
+  [
+    {
+      question: "Finns det några designbegränsningar?",
+      answer: `Designen kan placeras var som helst så att du kan använda fram- och baksidan samt ärmarna. Du kan använda vilka färger du vill med högst 6 färger per design. Manschetterna, kragen och fållen måste ha en solid färg, men förutom det har du total frihet att skapa de mest fantastiska mönster du kan tänka dig!`,
+    },
+    {
+      question: "Levererar ni internationellt?",
+      answer: `Ja vi skickar över hela världen. Fraktkostnaden beräknas baserat på produkt och kvantitet och debiteras som en del av den första betalningen. Vi visar dig fraktavgiften med orderbetalningen, allt på en gång. 
+
+Du kan minska dina fraktkostnader och göra besparingar genom att designa tidigt på året. Till exempel, för beställningar som görs i augusti, har du ett alternativ för långsammare frakt, vilket innebär att dina varor kommer fram i början av november. Det finns en enorm kostnadsbesparing med långsammare frakt och du har lång tid på dig att dela ut eller sälja dina tröjor. Dessutom är det mycket, mycket bättre för miljön. 
+
+Om du vill beställa senare kan vi självklart tillverka och skicka tröjorna otroligt snabbt.`,
+    },
+    {
+      question:
+        "Har ni en ful tröj-fabrik?",
+      answer: `Ja, det har vi. Vi tillverkar alla våra tröjor i en hållbar fabrik där människor behandlas rättvist och vi använder etiska produktionsmetoder. 
+
+Vi använder den senaste tekniken för att sticka alla dina tröjor - avancerade stickmaskiner kan sticka fantastiska mönster som ser ut och känns fantastiska. 
+
+Vi har tillverkat anpassade fula tröjor i nästan tio år - vi har en lång erfarenhet och de flesta av våra kunder kommer tillbaka gång på gång. De stickade kläder vi gör har fantastisk kvalitet. 
+
+För att komma i gång, klicka bara på länken nedan så hjälper vi dig gärna.`,
+    },
+  ],
+];
+---
+
+<div class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
+  <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
+    <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+      <h2 class="max-w-lg mb-4 font-sans text-3xl font-bold leading-none tracking-tight sm:text-4xl md:mx-auto">
+        Vanliga frågor och svar
+      </h2>
+    </div>
+  </div>
+  <div class="max-w-screen-xl sm:mx-auto">
+    <div class="grid grid-cols-1 gap-x-8 gap-y-8 lg:gap-x-16 md:grid-cols-2">
+      {
+      items.map((subitems) => (
+      <div class="space-y-8">
+        {subitems.map(({ question, answer }) => (
+        <div>
+          <p class="mb-4 text-xl font-bold">
+            <Icon name="tabler:arrow-down-right" class="w-7 h-7 text-blue-500 inline-block icon-bold" />
+            {question}
+          </p>
+          {answer.split("\n\n").map((paragraph) => (
+          <p class="text-gray-700 dark:text-gray-400 mb-2" set:html={paragraph} />
+          ))}
+        </div>
+        ))}
+      </div>
+      ))
+      }
+    </div>
+  </div>
+</div>
