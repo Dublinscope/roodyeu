@@ -5,16 +5,16 @@ const { } = Astro.props;
 const items = [
   [
     {
-      question: "Kan jeg snakke med noen om genseren min?",
-      answer: `Absolutt. Hver kunde får tildelt en kontoansvarlig, og de vil være fullt tilgjengelige gjennom hele prosessen. I arbeidstiden kan du vanligvis forvente å høre tilbake på ethvert spørsmål på under en time.`,
+      question: "Kan jeg få snakke med noen om genseren min?",
+      answer: `Absolutt. Hver kunde blir tilordnet en kontoadministrator, og de vil være fullt tilgjengelige gjennom hele prosessen. I arbeidstiden kan du vanligvis forvente å få et svar på et hvilket som helst spørsmål på under en time.`,
     },
     {
       question: "Er det noen skjulte kostnader?",
-      answer: `Ingen! Vi gir deg hele prisen på forhånd, inkludert både avgifter og frakt rett på døren.`,
+      answer: `Nei, ingen skjulte kostnader! Vi gir deg full pris på forhånd, inkludert både skatt og frakt rett til døren din.`,
     },
     {
-      question: "Hvor raskt kan jeg få dem?",
-      answer: `Rask. Genserne er strikket fra bunnen av, så det er litt håndarbeid involvert, men vår typiske produksjonstid er bare 30 dager. Vi kan til og med tilby hastebestillinger på forespørsel, så hvis du gir oss beskjed når du trenger dem, vil vi kunne bekrefte om vi kan møte datoen din. I de sjeldne tilfellene vi ikke kan, vil vi fortelle deg det.`,
+      question: "Hvor fort kan jeg få tak i dem?",
+      answer: `Raskt. Genserne strikkes fra bunnen av, så det er noe håndverk involvert, men vår typiske produksjonstid er bare 30 dager. Vi kan til og med tilby hastebestillinger på forespørsel, så hvis du gir oss beskjed om når du trenger dem, vil vi kunne bekrefte om vi kan oppfylle bestillingen innen datoen din. I de sjeldne tilfellene vi ikke kan vil vi fortelle deg det.`,
     },
     {
       question: "Kan jeg få mine egne etiketter?",
@@ -22,39 +22,39 @@ const items = [
     },
     {
       question:
-        "Hva mener du med bærekraftig??",
-      answer: `Avfall / Deponi - Nesten all vare havner på deponi uten å bli brukt. Ikke disse skreddersydde stygge genserne - disse unike kunstverkene er elsket av alle. Målet vårt er å lage en unik genser som er elsket og gjenbrukt om og om igjen. Vi elsker å se sosialt for å se hvordan kunstverkene dine ender opp. Vi har laget gensere i over 10 år, og vi vet hvordan vi skal få dem til å vare.
+        "Hva mener dere med bærekraftig?",
+      answer: `Søppel - Nesten all plagg med merkevarer havner i søppelet uten bruk. Ikke disse tilpassede stygge genserne - disse unike kunstverkene er elsket av alle. Å lage en unik genser som er elsket og vil brukes om og om igjen, er vårt mål. Vi elsker å følge med på sosiale medier for å se hvordan kunstverkene dine ender opp. Vi har laget gensere i over 10 år, og vi vet hvordan vi skal få dem til å vare. 
 
-Materialer - Vi bruker 100% akrylgarn til å lage genserne. Genserne er myke og slitesterke og slites og vaskes godt. Vi prøver alltid å bruke resirkulert akryl avhengig av tilgjengelighet. Vi minimerer potensielt avfall og lager bare den nøyaktige mengden garn som kreves for genserne dine - vi bruker ingen giftige eller skadelige behandlinger i produksjonsprosessen.
+Materialer - Vi bruker 100% akrylgarn for å lage genserne. Genserne er myke og holdbare og slites og vaskes godt. Vi prøver alltid å bruke resirkulert akryl avhengig av tilgjengelighet. Vi minimerer potensielt avfall bare for å gjøre den nøyaktige mengden garn som kreves for genserne dine - vi bruker ingen giftige eller skadelige behandlinger i produksjonsprosessen. 
 
-Arbeidsforhold - Vi har jobbet med en utvalgt gruppe produksjonspartnere i mange år nå, og de er virkelig fantastiske. Arbeidsforholdene for personalet er helt utmerket - våre produksjonspartnere revideres uavhengig og vi besøker også fabrikkene med jevne mellomrom for å sjekke selv. Vi passer på å aldri jobbe med billige, farlige, utnyttende produksjonspartnere.
+Arbeidsforhold - Vi har jobbet med en utvalgt gruppe produksjonspartnere i mange år nå, og de er virkelig fantastiske. Arbeidsforholdene for ansatte er gode - våre produksjonspartnere revideres uavhengig, og vi besøker også fabrikkene med jevne mellomrom for å sjekke selv. Vi sørger for å aldri jobbe med billige, farlige, utnyttende produksjonspartnere. 
 
-Treplanting - Selvfølgelig planter vi også et tre for hver gjenstand vi lager.`,
+Treplanting - Selvfølgelig planter vi også et tre for hver vare vi lager.`,
     },
   ],
   [
     {
       question: "Er det noen designbegrensninger?",
-      answer: `Designet kan gå hvor som helst slik at du kan bruke forsiden, baksiden og ermene. Du kan bruke alle farger du liker med maksimalt 6 farger per design. Mansjettene, kragene og falden må være ensfarget, men bortsett fra det har du total frihet til å lage bare de mest fantastiske designene!`,
+      answer: `Designet kan plasseres hvor som helst, slik at du kan bruke forsiden, baksiden og ermene. Du kan bruke alle farger du liker, med maksimalt 6 farger per utforming. Mansjetter, krager og kant må være en solid farge, men annet enn at du har total frihet til å lage bare de mest fantastiske designene!`,
     },
     {
-      question: "Sender du internasjonalt?",
-      answer: `Ja, vi sender over hele verden. Fraktkostnaden beregnes basert på produkt og mengde og belastes som en del av den første betalingen. Vi viser deg fraktkostnaden med hovedordrebetalingen, alt på en gang.
+      question: "Leverer dere internasjonalt?",
+      answer: `Ja, vi sender over hele verden. Fraktkostnaden beregnes basert på produkt og antall og belastes som en del av den første betalingen. Vi vil vise deg fraktkostnaden med hovedbestillingsbetalingen, alt på en gang. 
 
-Du kan redusere fraktkostnadene og spare ved å designe tidlig. For bestillinger plassert i august har du for eksempel et langsommere fraktalternativ, noe som betyr at varene dine kommer tidlig i november. Det er en enorm kostnadsbesparelse på tregere frakt, og du vil ha mye tid til å selge og selge genserne dine. I tillegg er det mye mye bedre for miljøet.
+Du kan redusere fraktkostnadene og spare penger ved å designe tidlig. For eksempel, for bestillinger som er lagt inn i august, har du et tregere fraktalternativ, noe som betyr at varene dine kommer i begynnelsen av november. Det er en enorm kostnadsbesparelse på tregere frakt, og du vil ha mye tid til å selge og selge genserne dine. I tillegg er det mye bedre for miljøet. 
 
-Hvis du ønsker å bestille senere, som alltid, kan vi lage og sende genserne utrolig raskt.`,
+Hvis du ønsker å bestille senere, som alltid, kan vi lage og sende genserne utrolig fort.`,
     },
     {
       question:
-        "Har du en Ugly genserfabrikk?",
-      answer: `Ja det gjør vi. Vi produserer alle våre gensere i en bærekraftig fabrikk hvor folk behandles rettferdig og vi bruker etiske produksjonsmetoder.
+        "Har dere en fabrikk for å lage stygg genser?",
+      answer: `Ja, det har vi. Vi produserer alle våre gensere i en bærekraftig fabrikk der folk blir behandlet rettferdig og vi bruker etiske produksjonsmetoder. 
 
-Vi bruker den nyeste teknologien for å strikke alle genserne dine - avanserte strikkemaskiner er i stand til å strikke fantastiske design som ser og føles strålende.
+Vi bruker den nyeste teknologien til å strikke alle genserne dine - avanserte strikkemaskiner er i stand til å strikke fantastiske design som ser ut og føles strålende. 
 
-Vi har laget skreddersydde stygge gensere i nesten ti år – vi har enorm erfaring og de fleste av kundene våre kommer tilbake gang på gang. Strikketøyet vi lager er den mest fantastiske kvaliteten.
+Vi har laget tilpassede stygge gensere i nesten ti år - vi har stor erfaring og de fleste av kundene våre kommer tilbake gang på gang. Strikketøyet vi lager er den mest fantastiske kvaliteten. 
 
-For å komme i gang klikker du bare på lenken nedenfor, så hjelper vi gjerne.`,
+For å komme i gang, bare klikk på lenken nedenfor, så hjelper vi deg gjerne.`,
     },
   ],
 ];
@@ -64,7 +64,7 @@ For å komme i gang klikker du bare på lenken nedenfor, så hjelper vi gjerne.`
   <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
     <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
       <h2 class="max-w-lg mb-4 font-sans text-3xl font-bold leading-none tracking-tight sm:text-4xl md:mx-auto">
-        Ofte stilte spørsmål
+        Vanlige spørsmål
       </h2>
     </div>
   </div>
