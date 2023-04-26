@@ -15,11 +15,8 @@ const { googleAnalyticsId = false } = SITE;
 <html lang="de" class="motion-safe:scroll-smooth 2xl:text-[24px]">
 
 <head>
-  <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"
-/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css" />
   <MetaTags {...meta} />
   {googleAnalyticsId &&
   <Analytics id={googleAnalyticsId} />}
@@ -28,7 +25,7 @@ const { googleAnalyticsId = false } = SITE;
 <body class="antialiased text-gray-900 tracking-tight bg-white">
   <slot />
   <BasicScripts />
-  <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
 </body>
 
 </html>
