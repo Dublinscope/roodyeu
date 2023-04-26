@@ -2,7 +2,6 @@
 import Layout from "~/layouts/BaseLayout.astro";
 
 import Header from "~/components/widgets/Header.astro";
-import Headertest from "~/components/widgets/Headertest.astro";
 import Footer from "~/components/widgets/Footer.astro";
 
 const { meta } = Astro.props;
@@ -10,7 +9,6 @@ const { meta } = Astro.props;
 
 <Layout meta={meta}>
   <Header />
-  <Headertest />
   <main>
     <slot />
   </main>
